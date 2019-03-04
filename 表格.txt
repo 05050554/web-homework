@@ -1,0 +1,34 @@
+<!doctype html>
+<html> 
+<head>
+<meta charset="utf-8"> 
+<title>Chinese Multiplication Table</title> 
+</head>
+<body>
+<?php
+	$ME=$_POST[M];
+	echo  $ME."!!";
+	$NE=$_POST[N];
+	echo  $NE."!!";
+	echo "<table border=1>";
+	for($i=1;$i<=$ME;$i++)
+	{
+		echo "<tr>";
+			for($j=1;$j<=$NE;$j++)
+			{
+				$ans=$i*$j;
+				echo "<td>$i"."X"."$j=$ans</td>";
+			}
+		echo "</tr>";
+	}
+	echo "</table>";
+	echo "</div>";
+ ?>
+
+<
+</table>
+</body>
+</html>
+
+
+	
