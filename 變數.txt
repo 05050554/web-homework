@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>hw01</title>
+</head>
+	<?
+		$A=100;
+		$B=180;
+		$C=30;
+		$D=$A+$B+$C;
+		
+		$E=78;
+		$F=65;
+		$G=93;
+		
+		$H=($E+$F+$G)/3;
+		echo  "商品A=";
+		
+		echo "$A";
+		echo "元<br>";
+		
+		echo  "商品B=";
+		
+		echo "$B";
+		echo "元<br>";
+		
+		echo  "運費=";
+		
+		echo "$C";
+		echo "元<br>";
+		
+		echo "總價:$A+$B+$C=$D<br><br>";
+		
+		echo "國文="; 
+		echo "$E<br>"; 
+		
+		echo "英文="; 
+		echo "$F<br>"; 
+		
+		echo "數學="; 
+		echo "$G<br>"; 
+		
+		echo "平均:";
+		echo "$H<br>";
+		?>
+</body>
+</html>
