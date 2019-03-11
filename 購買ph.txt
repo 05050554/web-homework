@@ -1,0 +1,59 @@
+ <html>
+<body>
+<?php
+	$ckbox0=$_POST["ckbox0"];
+	$ckbox1=$_POST["ckbox1"];
+	$ckbox2=$_POST["ckbox2"];
+	$textbox=$_POST["textbox"];
+	$textbox2=$_POST["textbox2"];
+	$textbox3=$_POST["textbox3"];
+	$textbox4=$_POST["textbox4"];
+
+	echo "使用者名稱:".$textbox4."</br>";
+
+	echo "您購買:";
+	if($ckbox0=="400")
+	{
+	  $money+=400*$textbox;
+	  echo "php入門書<BR>";
+	}
+
+	if($ckbox1=="550")
+	{
+	  $money+=550*$textbox2;
+	  echo "c語言入門書<BR>";
+	}
+	if($ckbox2=="800")
+	{
+	  $money+=800*$textbox3;
+	  echo "資料結構原文書<BR>";
+	}
+
+	echo "總共是:";
+	echo "$money<BR>"."元";
+	echo "會員資格:";
+
+	$member=$_POST["member"];
+
+	if($member==1)
+	{
+	  echo "金卡會員<BR>";
+	  $money=$money*0.7;
+	}
+	if($member==2)
+	{
+	  echo "銀卡會員<BR>";
+	  $money=$money*0.8;
+	}
+
+	if($member==3)
+	{
+	  echo "一般會員<BR>";
+	  $money=$money*0.95;
+	}
+	echo "打折後:";
+	echo "$money"."元";
+
+?>
+</body>
+</html>
