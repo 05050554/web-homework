@@ -1,0 +1,7 @@
+<?php
+	header("Content-Type:text/html; charset=big5");
+	$showStr="大家來學 <font color='blue'>PHP & MySQL</font>";
+	echo $showStr."<br />";
+	echo htmlspecialchars($showStr);
+	
+?>

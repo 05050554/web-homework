@@ -1,0 +1,12 @@
+<?php
+
+$showStr = "ABCDE";
+for($i=0;$i<=4;$i++)
+{
+echo str_repeat(substr("$showStr",$i,1),$i+1);
+echo "<br>";
+}
+
+
+
+?>
