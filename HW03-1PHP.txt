@@ -1,0 +1,56 @@
+<html> 
+<head>
+<meta charset="utf-8"> <title>Chinese Multiplication Table</title> 
+</head>
+<body>
+<?php
+	$ME=$_POST[M];
+	echo  $ME."!!";
+	$NE=$_POST[N];
+	echo  $NE."!!";
+	
+	for($i=1;$i<=$NE;$i++)
+	{
+		for($j=1;$j<=$ME;$j++)
+		{
+			$ans[$i][$j]=rand(1,100);
+		
+		}
+	}
+	
+	echo "<table border=1>";
+	for($i=1;$i<=$ME;$i++)
+	{
+		echo "<tr>";
+			for($j=1;$j<=$NE;$j++)
+			{
+				
+				echo "<td>".$ans[$j][$i];
+				echo "</td>";
+			}
+		echo "</tr>";
+	}
+	echo "</table>";
+	echo "Âà¸m¯x°}";
+	echo  $NE."!!";
+	echo  $ME."!!";
+	echo "<br>";
+	echo "<table border=1>";
+		for($j=1;$j<=$NE;$j++)
+	{
+		echo "<tr>";
+			for($i=1;$i<=$ME;$i++)
+			{
+				echo "<td>".$ans[$j][$i];
+				echo "</td>";
+			}
+		echo "</tr>";
+	}
+	echo "</table>";
+	echo "</div>";
+ ?>
+
+
+</table>
+</body>
+</html>
