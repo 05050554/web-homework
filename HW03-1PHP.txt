@@ -31,7 +31,7 @@
 		echo "</tr>";
 	}
 	echo "</table>";
-	echo "Âà¸m¯x°}";
+	echo "è½‰ç½®";
 	echo  $NE."!!";
 	echo  $ME."!!";
 	echo "<br>";
