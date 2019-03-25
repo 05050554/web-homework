@@ -1,0 +1,29 @@
+<?php
+header("Content-Type:text/html; charset=utf-8");
+date_default_timezone_set("Asia/Taipei");
+
+$date_server = date("Y-m-d H:i:s");
+echo "瞷丁: ";
+echo "$date_server";
+echo "<br>";
+
+$time2 = "2016-11-03 21:35:00";
+echo "丁: $time2.<br />";
+echo "畉计:";
+	echo (strtotime($date_server) - strtotime($time2)); //璸衡畉ぇ计
+	echo "<br>";
+echo "畉だ牧计: ";
+    echo (strtotime($date_server) - strtotime($time2))/ (60); //璸衡畉ぇだ牧计
+	echo "<br>";
+echo "畉计: ";
+    echo (strtotime($date_server) - strtotime($time2))/ (60*60); //璸衡畉ぇ计
+		echo "<br>";
+echo "畉ぱ计: ";
+    echo (strtotime($date_server) - strtotime($time2))/ (60*60*24); //璸衡畉ぇぱ计
+		echo "<br>";
+
+
+
+
+
+?>
