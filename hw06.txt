@@ -1,0 +1,47 @@
+
+
+<?php
+header("Content-Type:text/html; charset=utf-8");
+echo "<table width=700 border=1>";
+echo "<tr>";
+	echo "<td>目前檔案所在的路徑為：".getcwd()."</td>";
+	echo "</tr>";
+	
+
+
+
+echo "</table>";
+?>
+<html>
+<head>
+	<title>上傳檔案表單</title>
+</head>
+<body>
+<table width="700" border="1">
+<tr>
+	
+	<td>
+	<a href="連結網址">上一層|</a>
+	
+	上傳檔案：
+	<input type="file" name="fileUpload" />
+	<input type="submit" value="送出" />
+	</td>
+</table>
+	</form>
+</body>
+</html>
+
+<?php
+header("Content-Type:text/html; charset=utf-8");
+echo "<table width=700 border=1>";
+echo "<tr>";
+	echo "<td >名稱</td> <td width=150>檔案</td><td width=150>功能</td>";
+	echo "</tr>";
+echo "</table>";
+$fileDir = "../";
+$fileResource = scandir($fileDir);
+foreach($fileResource as $fileName){
+		if(is_dir($fileDir.'\\'.$fileName))	echo $fileName."<br />";
+	}
+?>
