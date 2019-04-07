@@ -7,7 +7,7 @@
 <body>
 <?php
 	$ME=$_POST[M];
-	echo  $ME."!!";
+	echo  $ME."!";
 	$NE=$_POST[N];
 	echo  $NE."!!";
 	echo "<table border=1>";
