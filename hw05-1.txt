@@ -3,23 +3,23 @@ header("Content-Type:text/html; charset=utf-8");
 date_default_timezone_set("Asia/Taipei");
 
 $date_server = date("Y-m-d H:i:s");
-echo "²{¦b®É¶¡¬°: ";
+echo "ç¾åœ¨æ™‚é–“ç‚º: ";
 echo "$date_server";
 echo "<br>";
 
 $time2 = "2016-11-03 21:35:00";
-echo "¥t¤@­Ó®É¶¡¬°: $time2.<br />";
-echo "¬Û®t¬í¼Æ¬°:";
-	echo (strtotime($date_server) - strtotime($time2)); //­pºâ¬Û®t¤§¬í¼Æ
+echo "å¦ä¸€å€‹æ™‚é–“ç‚º: $time2.<br />";
+echo "ç›¸å·®ç§’æ•¸ç‚º:";
+	echo (strtotime($date_server) - strtotime($time2)); //è¨ˆç®—ç›¸å·®ä¹‹ç§’æ•¸
 	echo "<br>";
-echo "¬Û®t¤ÀÄÁ¼Æ¬°: ";
-    echo (strtotime($date_server) - strtotime($time2))/ (60); //­pºâ¬Û®t¤§¤ÀÄÁ¼Æ
+echo "ç›¸å·®åˆ†é˜æ•¸ç‚º: ";
+    echo (strtotime($date_server) - strtotime($time2))/ (60); //è¨ˆç®—ç›¸å·®ä¹‹åˆ†é˜æ•¸
 	echo "<br>";
-echo "¬Û®t¤p®É¼Æ¬°: ";
-    echo (strtotime($date_server) - strtotime($time2))/ (60*60); //­pºâ¬Û®t¤§¤p®É¼Æ
+echo "ç›¸å·®å°æ™‚æ•¸ç‚º: ";
+    echo (strtotime($date_server) - strtotime($time2))/ (60*60); //è¨ˆç®—ç›¸å·®ä¹‹å°æ™‚æ•¸
 		echo "<br>";
-echo "¬Û®t¤Ñ¼Æ¬°: ";
-    echo (strtotime($date_server) - strtotime($time2))/ (60*60*24); //­pºâ¬Û®t¤§¤Ñ¼Æ
+echo "ç›¸å·®å¤©æ•¸ç‚º: ";
+    echo (strtotime($date_server) - strtotime($time2))/ (60*60*24); //è¨ˆç®—ç›¸å·®ä¹‹å¤©æ•¸
 		echo "<br>";
 
 
@@ -27,3 +27,4 @@ echo "¬Û®t¤Ñ¼Æ¬°: ";
 
 
 ?>
+//
