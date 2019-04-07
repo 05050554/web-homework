@@ -1,7 +1,7 @@
 <?php
 	function calculate($number){
 		$k=[];
-		echo "½è¼Æ";
+		echo "è³ªæ•¸";
 		echo "<br>";
 		for($i=1;$i<=$number;$i++){
 			$n=0;
