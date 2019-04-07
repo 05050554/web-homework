@@ -10,7 +10,7 @@
 	
 	$year=$_GET[year];
 
-	echo "¶|¦~";
+	echo "é–æœˆ";
 		$want=calculate($year);
 		echo "<table border='1'>";
 			echo "<tr>";
