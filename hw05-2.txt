@@ -9,7 +9,7 @@
 	$k=1;
 	echo "<div>";
 	echo "<table border='1'>";
-		echo "<tr><th>¬P´Á¤é<th>¬P´Á¤@<th>¬P´Á¤G<th>¬P´Á¤T<th>¬P´Á¥|<th>¬P´Á¤­<th>¬P´Á¤»";
+		echo "<tr><th>æ˜ŸæœŸæ—¥<th>æ˜ŸæœŸä¸€<th>æ˜ŸæœŸäºŒ<th>æ˜ŸæœŸä¸‰<th>æ˜ŸæœŸå››<th>æ˜ŸæœŸäº”<th>æ˜ŸæœŸå…­";
 		echo "<tr>";
 		for($i=1;$i<=$firstday;$i++)
 			echo "<td>";
@@ -31,3 +31,4 @@
 	echo "</table>";	
 	echo "</div>";
 ?>
+//
