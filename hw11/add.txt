@@ -1,7 +1,7 @@
 <?php 
 if(isset($_POST["action"])&&($_POST["action"]=="add")){
 	include("connMysql.php");
-	if (!@mysql_select_db("BookStore")) die("╦Й╝ф╝w©О╬э╔╒╠я║I");
+	if (!@mysql_select_db("BookStore")) die("ХЁ┤Ф√≥Е╨╚И│╦Ф⌠┤Е╓╠Ф∙≈О╪│");
 	
 	$sql_query = "INSERT `Books` (`cID` ,`cBookName`,`cAuthor`,`cPublisher`,`cPublishDate`,`cPrice`)VALUES(";
 	$sql_query .="'".$_POST["cID"]."',"; 
@@ -11,7 +11,7 @@ if(isset($_POST["action"])&&($_POST["action"]=="add")){
 	$sql_query .="'".$_POST["cPublishDate"]."',";
 	$sql_query .="'".$_POST["cPrice"]."',";
 	mysql_query($sql_query);
-	//╜╚╥s╬и╕V╕^╗Л╔D╣e╜╠
+	//И┤█Ф√╟Е╟▌Е░▒Е⌡·Е┬╟Д╦╩Г∙╚И²╒
 	header("Location: data.php");
 }	
 
@@ -21,36 +21,36 @@ if(isset($_POST["action"])&&($_POST["action"]=="add")){
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>╝ядy╦Й╝ф╨ч╡z╗t╡н</title>
+<title>Ф⌡╦Г╠█ХЁ┤Ф√≥Г╝║Г░├ГЁ╩Г╣╠</title>
 </head>
 <body>
-<h1 align="center">╝ядy╦Й╝ф╨ч╡z╗t╡н - ╥s╪W╦Й╝ф</h1>
-<p align="center"><a href="data.php">╕^╔D╣e╜╠</a></p>
+<h1 align="center">Ф⌡╦Г╠█ХЁ┤Ф√≥Г╝║Г░├ГЁ╩Г╣╠ - Ф√╟Е╒·ХЁ┤Ф√≥</h1>
+<p align="center"><a href="data.php">Е⌡·Д╦╩Г∙╚И²╒</a></p>
 <form action="" method="post" name="formAdd" id="formAdd">
   <table border="1" align="center" cellpadding="5">
     <tr>
-      <th>дФ╕Л</th><th>╦Й╝ф</th>
+      <th>Ф╛└Д╫█</th><th>ХЁ┤Ф√≥</th>
     </tr>
     <tr>
-      <td>╝я╕W</td><td><input type="text" name="cBookName" id="cBookName"></td>
+      <td>Ф⌡╦Е░█</td><td><input type="text" name="cBookName" id="cBookName"></td>
     </tr>
     <tr>
-      <td>╖@╙л</td><td><input type="text" name="cAuthor" id="cAuthor"></td>
+      <td>Д╫°Х─┘</td><td><input type="text" name="cAuthor" id="cAuthor"></td>
     </tr>
     <tr>
-      <td>╔X╙╘╟с</td><td><input type="text" name="cPublisher" id="cPublisher"></td>
+      <td>Е┤╨Г┴┬Е∙├</td><td><input type="text" name="cPublisher" id="cPublisher"></td>
     </tr>
     <tr>
-      <td>╔X╙╘╓И╢а</td><td><input type="text" name="cPublishDate" id="cPublishDate"></td>
+      <td>Е┤╨Г┴┬Ф≈╔Ф°÷</td><td><input type="text" name="cPublishDate" id="cPublishDate"></td>
     </tr>
     <tr>
-      <td>╟Б╩Ы</td><td><input type="text" name="cPrice" id="cPrice"></td>
+      <td>Е■╝Е┐╧</td><td><input type="text" name="cPrice" id="cPrice"></td>
     </tr>
     <tr>
       <td colspan="2" align="center">
       <input name="action" type="hidden" value="add">
-      <input type="submit" name="button" id="button" value="╥s╪W╦Й╝ф">
-      <input type="reset" name="button2" id="button2" value="╜╚╥s╤Я╪g">
+      <input type="submit" name="button" id="button" value="Ф√╟Е╒·ХЁ┤Ф√≥">
+      <input type="reset" name="button2" id="button2" value="И┤█Ф√╟Е║╚Е╞╚">
       </td>
     </tr>
   </table>
