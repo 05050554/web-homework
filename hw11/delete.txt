@@ -1,11 +1,17 @@
 <?php 
 include("connMysql.php");
-if (!@mysql_select_db("BookStore")) die("╦Й╝ф╝w©О╬э╔╒╠я║I");
-if(isset($_POST["action"])&&($_POST["action"]=="delete")){	
-	
-	$sql_query="DELETE FROM `Books` WHERE `cID`=".$_POST["cID"];
-		mysql_query($sql_query);
-	//╜╚╥s╬и╕V╕^╗Л╔D╣e╜╠
+if (!@mysql_select_db("BookStore")) die("ХЁ┤Ф√≥Е╨╚И│╦Ф⌠┤Е╓╠Ф∙≈О╪│");
+if(isset($_POST["action"])&&($_POST["action"]=="update")){	
+		if(isset($_POST["action"])&&($_POST["action"]=="update")){	
+		$sql_query = "UPDATE `Books` SET";
+		$sql_query .="`cBookName`='".$POST["cBookName"]."',"; 
+		$sql_query .="`cAuthor`='".$POST["cAuthor"]."',"; 
+		$sql_query .="`cPublisher`='".$POST["cPublisher"]."',"; 
+		$sql_query .="`cPublishDate`='".$POST["cPublishDate"]."',"; 
+		$sql_query .="`cPrice`='".$POST["cPrice"]."',"; 
+		$sql_query .="WHERE`cID`='".$POST["cID"]."',"; 
+	mysql_query($sql_query);
+	//И┤█Ф√╟Е╟▌Е░▒Е⌡·Е┬╟Д╦╩Г∙╚И²╒
 	header("Location: data.php");
 }
 $sql_db = "SELECT * FROM `Books` WHERE `cID`=".$_GET["id"];
@@ -15,37 +21,38 @@ $row_result=mysql_fetch_assoc($result);
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>╝ядy╦Й╝ф╨ч╡z╗t╡н</title>
+<title>Ф⌡╦Г╠█ХЁ┤Ф√≥Г╝║Г░├ГЁ╩Г╣╠</title>
 </head>
 <body>
-<h1 align="center">╝ядy╦Й╝ф╨ч╡z╗t╡н - ╖R╟ё╦Й╝ф</h1>
-<p align="center"><a href="data.php">╕^╔D╣e╜╠</a></p>
-<form action="" method="post" name="formDel" id="formDel">
+<h1 align="center">Ф⌡╦Г╠█ХЁ┤Ф√≥Г╝║Г░├ГЁ╩Г╣╠ - Д©╝Ф■╧ХЁ┤Ф√≥</h1>
+<p align="center"><a href="data.php">Е⌡·Д╦╩Г∙╚И²╒</a></p>
+<form action="" method="post" name="formFix" id="formFix">
   <table border="1" align="center" cellpadding="4">
     <tr>
-      <th>дФ╕Л</th><th>╦Й╝ф</th>
+      <th>Ф╛└Д╫█</th><th>ХЁ┤Ф√≥</th>
     </tr>
     <tr>
-      <td>╝я╕W</td><td><?php echo $row_result["cBookName"]?></td>
+      <td>Ф⌡╦Е░█</td><td><input type="text" name="cBookName" id="cBookName" value="<?php echo $row_result["cBookName"];?>"></td>
     </tr>
     <tr>
-      <td>╖@╙л</td><td><?php echo $row_result["cAuthor"] ?></td>
+      <td>Д╫°Х─┘</td><td><input type="text" name="cAuthor" id="cAuthor" value="<?php echo $row_result["cAuthor"];?>"></td>
     </tr>
     <tr>
-      <td>╔X╙╘╟с</td><td><?php echo $row_result["cPublisher"]?></td>
+      <td>Е┤╨Г┴┬Е∙├</td><td><input type="text" name="cPublisher" id="cPublisher" value="<?php echo $row_result["cPublisher"];?>"></td>
     </tr>
     <tr>
-      <td>╔X╙╘╓И╢а</td><td><?php echo $row_result["cPublishDate"]?></td>
+      <td>Е┤╨Г┴┬Ф≈╔Ф°÷</td><td><input type="text" name="cPublishDate" id="cPublishDate" value="<?php echo $row_result["cPublishDate"];?>"></td>
     </tr>
     <tr>
-      <td>╟Б╩Ы</td><td><?php echo $row_result["cPrice"]?></td>
+      <td>Е■╝Е┐╧</td><td><input type="text" name="cPrice" id="cPrice" value="<?php echo $row_result["cPrice"];?>"></td>
     </tr>
-
+    
     <tr>
       <td colspan="2" align="center">
-      <input name="cID" type="hidden" value="<?php ?>">
-      <input name="action" type="hidden" value="delete">
-      <input type="submit" name="button" id="button" value="╫T╘w╖R╟ёЁo╣╖╦Й╝ф╤э║H">
+      <input name="cID" type="hidden" value="<?php echo $row_result["cID"];?>">
+      <input name="action" type="hidden" value="update">
+      <input type="submit" name="button" id="button" value="Ф⌡╢Ф√╟ХЁ┤Ф√≥">
+      <input type="reset" name="button2" id="button2" value="И┤█Ф√╟Е║╚Е╞╚">
       </td>
     </tr>
   </table>
