@@ -2,7 +2,7 @@
 	header("Content-Type: text/html; charset=utf-8");
 	include("connMysql.php");
 	$seldb = @mysql_select_db("BookStore");
-	if (!$seldb) die("╦Й╝ф╝w©О╬э╔╒╠я║I");
+	if (!$seldb) die("ХЁ┤Ф√≥Е╨╚И│╦Ф⌠┤Е╓╠Ф∙≈О╪│");
 
 	$sql_query = "SELECT * FROM `Books`";
 	$result = mysql_query($sql_query);	
@@ -10,23 +10,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>╝ядy╨ч╡z╗t╡н</title>
+<title>Ф⌡╦Г╠█Г╝║Г░├ГЁ╩Г╣╠</title>
 </head>
 <body>
-<h1 align="center">╝ядy╨ч╡z╗t╡н</h1>
-<p align="center">╔ь╚e╦Й╝ф╣╖╪ф║G<?php $total_records;?>  <a href="add.php">╥s╪W╝ядy╦Й╝ф</a>║C</p>
+<h1 align="center">Ф⌡╦Г╠█Г╝║Г░├ГЁ╩Г╣╠</h1>
+<p align="center">Г⌡╝Е┴█ХЁ┤Ф√≥Г╜├Ф∙╦О╪ <?php $total_records;?>  <a href="add.php">Ф√╟Е╒·Ф⌡╦Г╠█ХЁ┤Ф√≥</a>Ц─┌</p>
 <table border="1" align="center">
-  <!-- ╙М╝Ф╙МюY -->
+  <!-- Х║╗Ф═╪Х║╗И═╜ -->
   <tr>
-    <th>╖г╦╧</th>
-    <th>╝я╕W</th>
-    <th>╖@╙л</th>
-    <th>╔X╙╘╟с</th>
-    <th>╔X╙╘╓И╢а</th>
-    <th>╔X╙╘╓И╢а</th>
-    <th>╟Б╩Ы</th>
+    <th>Е╨▐Х≥÷</th>
+    <th>Ф⌡╦Е░█</th>
+    <th>Д╫°Х─┘</th>
+    <th>Е┤╨Г┴┬Е∙├</th>
+    <th>Е┤╨Г┴┬Ф≈╔Ф°÷</th>
+    <th>Е■╝Е┐╧</th>
   </tr>
-  <!-- ╦Й╝ф╓╨╝e -->
+  <!-- ХЁ┤Ф√≥Е┘╖Е╝╧ -->
 <?php
 	while($row_result=mysql_fetch_array($result)){
 		echo "<tr>";
@@ -36,8 +35,8 @@
 		echo "<td>".$row_result["cPublisher"]."</td>";
 		echo "<td>".$row_result["cPublishDate"]."</td>";
 		echo "<td>".$row_result["cPrice"]."</td>";
-		echo "<td><a href='update.php?id".$row_result["cID"].";>╜в╖О</a>";
-		echo "<td><a href='delete.php?id".$row_result["cID"].";>╖R╟ё</a></td>";
+		echo "<td><a href='update.php?id".$row_result["cID"]."'>Д©╝Ф■╧</a>";
+		echo "<td><a href='delete.php?id".$row_result["cID"]."'>Е┬╙И≥╓</a></td>";
 		echo "</tr>";
 		
 	}
