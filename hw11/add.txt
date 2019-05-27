@@ -3,13 +3,13 @@ if(isset($_POST["action"])&&($_POST["action"]=="add")){
 	include("connMysql.php");
 	if (!@mysql_select_db("BookStore")) die("資料庫選擇失敗！");
 	
-	$sql_query = "INSERT `Books` (`cID` ,`cBookName`,`cAuthor`,`cPublisher`,`cPublishDate`,`cPrice`)VALUES(";
-	$sql_query .="'".$_POST["cID"]."',"; 
+	$sql_query = "INSERT INTO `Books` (`cBookName` ,`cAuthor` ,`cPublisher` ,`cPublishDate` ,`cPrice`)VALUES(";
+
 	$sql_query .="'".$_POST["cBookName"]."',";
 	$sql_query .="'".$_POST["cAuthor"]."',";
 	$sql_query .="'".$_POST["cPublisher"]."',";
 	$sql_query .="'".$_POST["cPublishDate"]."',";
-	$sql_query .="'".$_POST["cPrice"]."',";
+	$sql_query .="'".$_POST["cPrice"]."')";
 	mysql_query($sql_query);
 	//重新導向回到主畫面
 	header("Location: data.php");
