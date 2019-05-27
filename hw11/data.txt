@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1 align="center">書籍管理系統</h1>
-<p align="center">目前資料筆數：<?php $total_records;?>  <a href="add.php">新增書籍資料</a>。</p>
+<p align="center">目前資料筆數：<?php $total_records;?><a href="add.php">新增書籍資料</a>。</p>
 <table border="1" align="center">
   <!-- 表格表頭 -->
   <tr>
@@ -27,7 +27,7 @@
   </tr>
   <!-- 資料內容 -->
 <?php
-	while($row_result=mysql_fetch_array($result)){
+	while($row_result=mysql_fetch_assoc($result)){
 		echo "<tr>";
 		echo "<td>".$row_result["cID"]."</td>";
 		echo "<td>".$row_result["cBookName"]."</td>";
@@ -35,8 +35,8 @@
 		echo "<td>".$row_result["cPublisher"]."</td>";
 		echo "<td>".$row_result["cPublishDate"]."</td>";
 		echo "<td>".$row_result["cPrice"]."</td>";
-		echo "<td><a href='update.php?id".$row_result["cID"]."'>修改</a>";
-		echo "<td><a href='delete.php?id".$row_result["cID"]."'>刪除</a></td>";
+		echo "<td><a href='update.php?id=".$row_result["cID"]."'>修改</a> ";
+		echo "<a href='delete.php?id=".$row_result["cID"]."'>刪除</a></td>";
 		echo "</tr>";
 		
 	}
