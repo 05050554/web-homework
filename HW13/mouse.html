@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HW01</title>	
+    <script language="javascript">
+      function showIMG2()
+      {
+        document.images[0].src="switch.jpg"; 
+      }
+
+      function showIMG1()
+      {
+        document.images[0].src="10.jpg"; 
+      }
+    </script>
+  </head>
+  <body>
+    <img src="10.jpg" width="500"
+	  onmouseover="javascript:showIMG2();" 
+      onmouseout="javascript:showIMG1();">
+  </body>
+</html>
